@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<main class="app-container">
+
+  <h1>To-Do List</h1>
+
+  <form id="add-form" class="add-form">
+
+    <input 
+      id="task-input" 
+      type="text" 
+      placeholder="What needs to be done?"
+      required
+    >
+
+    <input 
+      id="hours-input"
+      type="number"
+      min="0"
+      value="0"
+    >
+
+    <button>Add</button>
+
+  </form>
+
+
+  <section class="task-controls">
+
+    <nav class="filters">
+
+      <button class="filter active" data-filter="all">
+        All
+      </button>
+
+      <button class="filter" data-filter="active">
+        Active
+      </button>
+
+      <button class="filter" data-filter="completed">
+        Completed
+      </button>
+
+    </nav>
+
+
+    <button id="toggle-all" class="text-button">
+      Mark all done
+    </button>
+
+  </section>
+
+
+  <ul id="task-list" class="task-list"></ul>
+
+
+  <footer class="footer">
+
+    <span id="task-summary">
+      0 items left · 0 hours total
+    </span>
+
+
+    <button 
+      id="clear-completed"
+      class="text-button"
+      hidden
+    >
+      Clear completed
+    </button>
+
+  </footer>
+
+
+  <p class="hint">
+    Easy: up to 2h · Medium: over 2h · Hard: over 5h.
+    <br>
+    Double-click task or label to edit.
+    Press Enter to save, Esc to cancel.
+  </p>
+
+
+</main>
+
+</body>
+</html>
